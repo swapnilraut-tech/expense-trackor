@@ -1,5 +1,6 @@
 import { Outfit} from "next/font/google";
 import "./globals.css";
+import Header from "./_components/consatant/Header";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${outfit.className} antialiased`}
       >
+        <Header />
         {children} 
       </body>
     </html>
