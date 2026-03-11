@@ -1,7 +1,6 @@
-
-import { Button } from '../../../components/ui/button';
-import { Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
-import React from 'react'
+import { Button } from "../../../components/ui/button";
+import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import React from "react";
 
 const Header = () => {
   return (
@@ -17,12 +16,12 @@ const Header = () => {
           </SignUpButton>
         </Show>
         <Show when="signed-in">
-          <UserButton/>
+          <UserButton />
         </Show>
       </header>
       <Button>Click To Add Expense</Button>
     </div>
   );
-}
+};
 
-export default Header
+export default Header;
