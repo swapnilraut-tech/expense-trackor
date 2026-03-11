@@ -1,8 +1,10 @@
+'use client'
 import { Button } from "../../../components/ui/button";
-import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import { Show, SignInButton, SignUpButton, UserButton, useUser  } from "@clerk/nextjs";
 import React from "react";
 
 const Header = () => {
+  const {user , isSignedIn} = useUser()
   return (
     <div className="flex justify-between items-center p-5">
       <h1>Expense Tracker</h1>
@@ -16,7 +18,10 @@ const Header = () => {
           </SignUpButton>
         </Show>
         <Show when="signed-in">
-          <UserButton />
+          {
+            isSignedIn ?  <UserButton /> : <Button>Get Started</Button>
+          }
+         
         </Show>
       </header>
       <Button>Click To Add Expense</Button>
