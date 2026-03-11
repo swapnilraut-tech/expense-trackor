@@ -1,5 +1,5 @@
 
-import { Button } from '@/components/ui/button';
+import { Button } from '../../../components/ui/button';
 import { Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
 import React from 'react'
 
