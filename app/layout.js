@@ -1,6 +1,7 @@
 import { Outfit} from "next/font/google";
 import "./globals.css";
 import Header from "./_components/consatant/Header";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -18,8 +19,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${outfit.className} antialiased`}
       >
+        <ClerkProvider>
+
         <Header />
         {children} 
+        </ClerkProvider>
       </body>
     </html>
   );
